@@ -1,0 +1,431 @@
+
+Day 1 : Programming Logic/Alogirithms/Flowcharts 
+
+Day 2 : UNIX/GIT {WorkShop}
+
+Day 3 : GIT {WorkShop}
+
+Day 4 : Trello {Exercises}
+
+Canteen Management Project 
+
+_____________________________________________________________________________________________
+
+
+Programming Language and Techniques : 
+
+
+What is Problem Solving : 
+
+
+Searching Algorithms : 
+________________________
+
+
+1) Search for an element in an array.
+
+O(1) => best efficiency
+
+O(n) -> Worst efficiency 
+
+O(n/2) -> Average efficiency 
+
+
+But, this logic not acceptable, as while searching huge no.of elements. 
+
+So, what is the alternative logic for this. 
+
+
+We have to go w.r.t. Binary Search 
+
+
+Take 
+
+take 'x' as search element. 
+low = 0
+high = n Assue n is 9
+mid = (low+high)/2
+
+if x < a[mid] 
+  high = mid-1
+
+if x > a[mid]
+  low = mid+1
+_____________________________________________________________________________________________
+
+
+      21 89 33 45 8 77 9 13 44 73 63 19 
+
+
+       The above list we have to Sort by Using Quick Sort. 
+
+
+  Take 21 as Pivot 
+
+   In writing diretion find out first greatest element than pivot
+   
+   In reverse direction find out which is first smallest element than pivot 
+
+   Swap Them. 
+
+     89 19 we have to Swap, then the list will be
+
+
+
+      21 19 33 45 8 77 9 13 44 73 63 89 
+
+  Again do the same steps 
+
+     
+   33 is greatest element and 13 is smallest element, we have to swap it. 
+
+
+      21 19 13 45 8 77 9 33 44 73 63 89 
+
+
+   Again do the same steps 
+
+     45     9, Please swap 
+  
+      21 19 13 9 8 77 45 33 44 73 63 89 
+
+   Again, do the same steps 
+
+      77 8 both are in correct order, no swaping required to break the list into 2 lists. 
+
+    21 19 13 9 8  -> List 1
+
+    77 45 33 44 73 63 89 as List 2 
+
+
+    21 19 13 9 8  -> List 1
+
+    21 is pivot which is greatest and 8 is first smallest, then 
+
+    8 19 13 9 21
+
+    8 > 19 so 8 will be in separate list and new list take 19 as pivot 
+
+    8 -> List1_1
+
+    19 13 9 21  -> 19 as pivot 
+
+    21 -> List1_3 
+
+    19 13 9 -> as pivot is greatest one so, the list will be 
+
+    9 13 19 -> List_1_2 
+
+Join all the lists. 
+
+    8 9 13 19 21 -> List_1_Sorted. 
+
+  
+77 45 33 44 73 63 89 as List 2 
+
+
+89 is greatest and which is smallest 63 both in correct order so split the list 
+
+List2_3 : 89
+
+List2_1 
+
+77 45 33 44 73 63
+
+63 45 33 44 73 77 
+
+list2_2 : 77 
+
+63 45 33 44 73 
+
+63 is pivot 
+
+44 and 73 in correct order so split the list again
+
+list_2_1 : 73 
+
+63 45 33 44 
+
+
+44 45 33 63 
+
+63 separated 
+
+44 45 33 
+
+33 44 45 
+
+list2_sorted : 
+
+   
+33 44 45 63 73 77
+
+list1_sorted : 
+
+    8 9 13 19 21
+
+Combined Sorted List : 
+
+8 9 13 19 21 33 45 63 73 77 -> Final Sorted List. 
+
+
+
+Unsorted List : 
+________________
+
+23 5 77 15 87 13 86 14 9 16 56 65 78 43
+
+Apply Quick Sort and show the results. 
+
+
+back by 2.15
+
+Thank U
+
+STACK & QUEUE
+_____________
+
+
+
+STACK (LIFO) Last In First Out 
+
+It performs 2 operations as 
+
+PUSH and POP
+
+both operations will happen from same end. 
+
+
+
+{(3*5) + (4*2)]}
+
+Till this time, we discussed w.r.t. 
+
+Static and Dynamic Data Structures, where we have
+
+Arrays 
+Linked Lists
+Stacks
+Queue
+
+
+There Arrays are flexible to retrieve information faster. 
+Linked Lists flexible to perform insert/delete/update operations. 
+
+
+But, i need a data structure that which performs all operations in efficient way. 
+
+Arrays and Linked Lists are Linear data structures. 
+
+So, we need to handle non-linear data also. 
+
+Then we need the help of Trees. 
+
+Binary Tree allows you to add the elements w.r.t. Specific node position. 
+
+A binary tree contains Left Sub tree and Right Subtree. 
+
+How to classify the elements into Left and Right Subtree. 
+
+Take the root element, and all the elements which are less than Root Element will be falling under left Sub tree. 
+
+All the elements which are greater than root element will be falling under right sub tree. 
+
+The same will be followed in corresponding hierarchy. 
+
+_______________________________________________________________________________________________________________________________
+
+      21 89 33 45 8 77 9 13 44 73 63 19 
+
+In the above list, take 21 as root node. 
+
+
+
+
+
+
+
+    https://us-east-2.console.aws.amazon.com/codesuite/codecommit/repositories/MLP230/browse?region=us-east-2#
+
+
+1	Batch 3	MLP 230	53243	Jahnavi Andra
+2	Batch 3	MLP 230	53245	JENCY PRIYA AROCKIASAMY
+3	Batch 3	MLP 230	53299	Debi Prasad Acharya
+4	Batch 3	MLP 230	53244	Jashwanth Thyarana Durgam
+5	Batch 3	MLP 230	53253	Karthik Prahash Murugavel
+
+
+__________________________________________________________________________
+
+
+    https://us-east-2.console.aws.amazon.com/codesuite/codecommit/repositories/MLP231/browse?region=us-east-2#
+
+
+Batch 3	MLP 231	53280	LENINRAJ R	P
+Batch 3	MLP 231	53255	Kratika Pandey	P
+Batch 3	MLP 231	53340	Hema Sai Sree	P
+Batch 3	MLP 231	53257	KRISHNA PRIYA LAVU	P
+Batch 3	MLP 231	53258	Krishna Teja Chalamalasetti Sai Naga Venkata	P
+ 
+
+___________________________________________________________________________________________________________
+
+    https://us-east-2.console.aws.amazon.com/codesuite/codecommit/repositories/MLP232/browse?region=us-east-2#
+
+11	Batch 3	MLP 232	53282	Mahalakshmi M
+12	Batch 3	MLP 232	53283	MANASA JADDA
+13	Batch 3	MLP 232	53284	Mansi Nema
+14	Batch 3	MLP 232	53254	kartik sharda
+15	Batch 3	MLP 232	53256	KRISHNA R
+
+______________________________________________________________________________________________________________
+
+https://us-east-2.console.aws.amazon.com/codesuite/codecommit/repositories/MLP233/browse?region=us-east-2#
+
+16	Batch 3	MLP 233	53285	Megha Aggarwal
+17	Batch 3	MLP 233	53287	Mulla Kavitha
+18	Batch 3	MLP 233	53306	Neelima Yellampalli
+19	Batch 3	MLP 233	53277	KUMAR SUNDRAM
+20	Batch 3	MLP 233	53278	Ladi Rakesh kumar
+
+________________________________________________________________________________________________________________
+
+https://us-east-2.console.aws.amazon.com/codesuite/codecommit/repositories/MLP234/browse?region=us-east-2#
+
+21	Batch 3	MLP 234	53307	Neha Das
+22	Batch 3	MLP 234	53304	Divya Tirunagari
+23	Batch 3	MLP 234	53281	Maaz Khan
+24	Batch 3	MLP 234	53286	MOHIT CHARAN MULLAPUDI
+25	Batch 3	MLP 234	53288	MUSTAFEED JAMADAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
