@@ -1,0 +1,10 @@
+Git contains 4 regions as
+
+1) Working Directory (Default Directory)
+
+2) Staging Area (Contains files which are ready to commit, means you have 10 files in that 4 files you modified, once you are added to staged area then these 4 files are ready to commit to remote)
+
+3) local repository : Once you finalized the changes succesfully, then you need to commit the file to the local repository. Once its added to the local repository, then you can push the changes to remote.  (Once it is in local repository, you never get updates in remote)
+
+4) remote repository : Once you push the files to remote repository, then the files will be available to all remote users. 
+
