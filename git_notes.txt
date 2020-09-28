@@ -13,3 +13,14 @@ git commit -m "message" {if you dont give message, it opens in vi editor and pro
 
 4) remote repository : Once you push the files to remote repository, then the files will be available to all remote users. 
 
+git push origin master {master is the branch_name} 
+
+5) git status : Used to define the status 
+
+6) git checkout filename : Used to cancel the changes in the file. 
+
+7) git head reset file_name : Used to unstage the file. 
+
+
+
+
