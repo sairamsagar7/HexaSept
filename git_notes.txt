@@ -21,6 +21,20 @@ git push origin master {master is the branch_name}
 
 7) git head reset file_name : Used to unstage the file. 
 
+8) To create a branch 
+
+   git branch branch_name
+
+9) To change to the branch 
+
+   git checkout branch_name 
 
 
+10) To see the list of branches
+
+    git branch
+
+11) You can directory create branch and move by using 
+
+git checkout -b branch_name 
 
