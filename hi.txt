@@ -3,3 +3,6 @@ hello
 bye
 day2
 day3
+krishna
+teja
+divya
