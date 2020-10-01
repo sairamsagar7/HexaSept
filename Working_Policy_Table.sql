@@ -2,7 +2,7 @@ use HexaSept;
 DROP TABLE IF EXISTS POLICY;
 Create Table Policy
 (
-  PolicyID int AUTO_INCREMENT,
+  PolicyID int AUTO_INCREMENT ,
   AppNumber varchar(30),
   AppDate date,
   PolicyNumber varchar(30),
