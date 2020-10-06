@@ -1,0 +1,18 @@
+Let's see some frequently used validation annotations.
+
+Annotation	Description
+@NotNull	It determines that the value can't be null.
+@Min	It determines that the number must be equal or greater than the specified value.
+@Max	It determines that the number must be equal or less than the specified value.
+@Size	It determines that the size must be equal to the specified value.
+@Pattern	It determines that the sequence follows the specified regular expression.
+
+
+
+<dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-core</artifactId>
+   <version>5.4.19.Final</version>
+</dependency>
+
+http://download.jboss.org/jbosstools/updates/stable/mars
