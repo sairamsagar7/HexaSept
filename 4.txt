@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 ljasdflkjasdf
 as
 df
 asdf
 as
 f
+=======
+asdfas
+df
+as
+fa
+sdf
+asf
+sa
+>>>>>>> e88ad376610e061f019fab6712e175700465ba3e
