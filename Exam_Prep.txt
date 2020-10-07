@@ -1,0 +1,43 @@
+1) What is definition for first normal form 
+
+Each cell precisely contains only atomic values. 
+
+2) What is Atomocity 
+
+   either all of them are performed or none of them are performed. 
+
+3) What is Durability 
+
+The changes need to be retained in system during long run. 
+
+4) What is Isolation
+
+Isolation : This states that any data modification made by concurrent transactions must be isolated from the modifications made by other concurrent transactions.  There is no scope for the transaction to seee an intermediate state.
+
+5) Which clause used to sort records in mysql 
+
+Order By
+
+6) If table A contains 10 records, and Table B contains 5 records, if any cartician join applies then how many records will be returned
+
+50
+
+7) What would be the output for the below sql command 
+
+   Select job,sum(sal) from Emp
+     Group By Job;
+
+8) What would be output for the below command 
+
+   SELECT Ename,Sal from Emp 
+    having sal > 3000;
+
+
+git --amend : used to add the new files to the previous commit without changing the commit message. 
+
+git commit --amend --no-edit
+
+used to add the newly added files to the previous commit w.r.t. not changing the commit message. 
+
+
+
