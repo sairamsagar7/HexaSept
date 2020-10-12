@@ -1,0 +1,253 @@
+Exception Handling
+
+Maven
+
+JDBI
+
+Exception Handling : 
+
+It is a mechanism of handling the runtime errors during execution of the program. There are 2 types of errors known as 
+
+	(i) Compile
+
+       (ii) Runtime 
+
+By using Exception Handling, we can overcome the runtime errors. 
+
+To handle errors, we have 3 blocks as 
+
+1) try : This block contains statements in which there is possibility of getting runtime errors, the statements which are placed in this block are treated as heavy weighted statements as JVM allocates excess memory to them. 
+
+2) catch : Once exception raised in try block, then the control will be forwarded to catch blok, this block contains alternate statements for exceptions raised in try block. One try block can contains multiple catch blocks. 
+
+3) finally : This block contains all the statements that needs to be executed mandetory irrespective and try and catch blocks, this block is not mandetory but all the statements which are placed in this block are executed as mandetory statements. 
+
+Exception is the top most class from which all kinds of exceptions are derived. 
+
+try {
+...
+...
+...
+} catch (Exception e) {
+...
+...
+}
+
+printStackTrace() : This method which will give all information about the exception. Like 
+
+Exception class
+Error Message
+Line Number
+Char Pos
+etc...
+
+Types of Exceptions : 
+
+
+There are 2 types of exceptions known as
+
+	(i) Checked Exceptions : These are the exceptions that occurs at compile time, during compilation
+		jvm feels some erroneous code is there, and stops the execution at compile time, can be
+		handled at method level, by using throws keyword. 
+
+       (ii) Unchecked Exceptions : These are the exceptions that which occurrs at compile time, can be handled by using try...catch 					block.
+
+
+throws can be used at method level.
+
+throws allows you to handle exception classes. 
+
+throw keyword : Allows you to throw an exception object, based on the condition, it would be at code level. 
+
+Write a Program as accept a number, if no < 0 then throw Arithmetic Exception, if no == 0 then throw NumberFormatException
+else print that number 
+
+
+Custom Exception 
+
+<module name="ParameterNumber">
+ <property name="max" value="30"/>
+</module>
+
+Collections : 
+______________
+
+The drawback with arrays are, 
+
+	fixed size
+
+        cannot allocated memory at runtime. 
+
+So, to handle this we need the help of Collections. 
+
+To deal with collections, we need the help of java.util package. 
+
+In Collections, we have top 3 interfaces as
+
+Collections will store data w.r.t. Object format. 
+
+1) List : This interface allows you to add list of values. 
+
+	ArrayList is falling under list interface. 
+
+2) Set
+
+3) SortedSet
+
+
+The drawback with collections is Collection can take data in Object format, so it can add any data into this, as we don't provide any security to the data. 
+
+Generics : Allows you to pass generalized data types. 
+
+	If you want ensure write once and apply for all types then we need the help of generics. 
+
+
+Advantages :
+_____________
+
+  -> Provides Security to the data
+
+  -> No Typecasting Required
+
+  -> Reduces the size of the Program. 
+
+
+You can represent generic as <>
+
+Normal collection declaration as 
+
+List empList = new ArrayList();  // which don't have any security.
+
+List<Employ> empList = new ArrayList<Employ>();
+
+Then empList contains only Employ class objects only. 
+
+Scanner : 
+
+yyyy-MM-dd;
+
+
+JDBI  
+
+
+Java applications cannot directly communicate with a database to submit data and retrieve the results of queries. You need a mechanism to translate java statements into SQL statements. The JDBI architecture provides the mechanism for this kind of transaction. 
+
+JDBIArchitecture is classified into 2 types. 
+
+JDBIApplication Layer : Signifies a java application that uses the JDBIAPI to interact with the JDBIdrivers. A JDBIdriver is a software that a java application uses to access a database. 
+
+JDBIDriver Layer : Acts as an interface between a java applicatinos and a database. This layer contains a driver, such as a SQL Server driver or Oracle driver, which enables you to connect to the database. A driver sends the request of a java application to the database. After processing the request, the database sends the response back to the driver. The Driver translates and sends the response to the JDBIAPI. 
+
+Types of JDBIDrivers : 
+
+1) JDBC-ODBC Bridge Driver {Type 1}
+
+2) Native-API Partly-Java driver {Type 2}
+
+3) JDBC-Net Pure-Java driver {Type 3}
+
+4) Native Protocol Pure-java Driver. {Type 4}
+
+1. JDBC-ODBC Bridge Driver : It is called type 1 driver, that converts the JDBIcalls to Open Database Connectivity (ODBC). ODBC is an open standard API to communicate with the databases.  The JDBC-ODBC bridge driver enables a java app. to use any database that supports ODBC driver. Java application will not interact with the ODBC driver, for this purpose, we need to use JDBC-ODBC bridge driver that works as an interface between the app and the ODBC driver. 
+
+2. Native-API Partly-Java Driver : It is called type 2 driver. It uses the local native libraries provided by the database vendors to access databases. The JDBIdriver maps the JDBIcalls to the native method calls, which are passed to the local native Call Level Interface(CLI). To use this driver the CLI needs to be loaded on the client computer. As opposed to the JDBC-ODBC bridge driver, the Native-API partly-java driver does not have an ODBC intermediate layer. 
+
+3. JDBC-Net Pure-Java Driver : This is called Type 3 driver. You can use the JDBC-Net Pure-Java Driver over the web while connecting applets with databases. This driver consists of client and server portions. Client Portion contains the pure java functions and the server side portion contains java and native methods. The java app. sends the JDBIcalls to the JDBC-Net Pure java driver client portion, which in turn, translates JDBIcalls into database calls. 
+
+4. Native Protocol Pure-java driver : This is called type 4 driver, it is a java driver that interacts with the database directly using a vendor-specific network protocol, As opposed to the other JDBIdrivers, you do not require to install any vendor-specific libraries to use the Type 4 driver. 
+
+
+_______________________________________________________________________________
+
+You need to load the database drivers and the JDBIAPI while developing a java application to retrieve or store data in a database. All JDBIclasses and interfaces are available in java.sql package. The classes and interfaces performs the no.of tasks such as establish and close the connectino with a database, send a request to the database etcc..
+
+DriverManager class : Loads the Driver for a database. 
+
+
+To query a database and display the result using java application, you need to : 
+
+1) Load a Driver
+
+2) Connect to database
+
+3) Create and execute JDBIstatements
+
+4) handle SQL Exceptions. 
+
+Loading Driver : 
+
+You can load the driver by using forName() method. 
+
+
+Class.forName("sun.jdbc.odbc.JdbcOdbcDriver"); // Type 1 driver
+
+Class.forName("net.sourceforge.jtds.jdbc.Driver"); // Type 4 driver
+
+Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			Connection con=DriverManager.getConnection(
+					"jdbc:oracle:thin:@localhost:1521:xe","scott","tiger");
+
+	Class.forName("com.mysql.jdbc.Driver");
+			Connection con=DriverManager.getConnection( 				    "jdbc:mysql://localhost:3306/sqlprac","root","root");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
