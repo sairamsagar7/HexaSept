@@ -9,6 +9,9 @@
       <version>8.0.18</version>
     </dependency>
 
+  public static List<Employ> showEmploy() {
+       return dao().showEmploy();
+   }
 
  List<Employ> employList = EmployFactory.showEmploy();
         for(Employ e : employList) {
