@@ -17,3 +17,7 @@
         for(Employ e : employList) {
             System.out.println(e);
         }
+
+<module name="ParameterNumber">
+   <property name="max" value="30"/>
+</module>
