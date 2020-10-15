@@ -1,0 +1,24 @@
+Functionality of 
+
+	-> PlaceOrder
+
+		Once you place an order, then we need to enter
+		
+		custId, VenId, MenuId, OrdDate, qytOrd, WalType, then calculate bill amount {get price from Menu Table and calculate Bill}
+		Then please check you have sufficient funds or not. If no sufficient funds, then return message as "insufficient funds"
+
+		If u have funds, then Insert record into Orders table (BY Default OrderStatus is PENDING)
+
+		Update the walletAmount for Customer.	
+
+	-> AcceptOrReject Order
+
+		If venor Accepts the order, then for that record change the OrderStatus as ACCEPTED 
+
+		if vendor rejects the order, then for that record change the OrderStatus as REJECTED
+			and please refund the amount to corresponding Wallet. 
+
+
+
+
+		
