@@ -20,5 +20,12 @@ Functionality of
 
 
 
+prassucp@gmail.co
 
-		
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+String odate = option.next();
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+Date dt = sdf.parse(odate);
+order.setOrdDate(dt);
