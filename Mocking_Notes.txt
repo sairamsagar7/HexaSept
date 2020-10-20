@@ -1,0 +1,100 @@
+JMOCKIT
+________
+
+
+Mock Test 
+
+JMOCK IT : It is a framework that which allows you to test database method. 
+
+It allows you to test data w.r.t. mock data instead of database records. 
+
+To start with JMOCK, we need to add the dependency to the project POM File. 
+
+
+<dependency>
+      <groupId>org.jmockit</groupId>
+      <artifactId>jmockit</artifactId>
+      <version>1.33</version>
+      <scope>test</scope>
+    </dependency>
+
+After adding the above dependecy, next your test cases needs to support the JmockIT, so we have to write the annotation at the test case. 
+
+@RunWith(JMockit.class)
+
+
+Expectations : This section contains the redirection code, means when you call the database method, instead of hitting the database which alternate data we have to provide to be given in expectations. 
+
+
+if i give 
+
+dao().show() -> Then it hits the database, but in expectations, you have to give alternate data to that as 
+
+      final ArrayList<Employ> employList = new ArrayList<Employ>();
+      employList.add(new Employ(1, "Sougata", "Java", "Programmer", 844223));
+      employList.add(new Employ(3, "Ram", "Angular", "Expert",58553));
+      employList.add(new Employ(4, "Jashwanth", "Angular", "Programmer",78553));
+
+
+Here, employList collection contains dummy data (Mocked Data), then we have to specify if you hit the database, instead of going to database, please redirect to the dummy data (Mocked Data), then 
+
+   new Expectations() {
+      {
+        dao.show(); result = employList;
+      }
+    };
+ 
+
+Once we call the EmployDAO methods, it will redirect to dummy data. 
+
+•	@Mocked: This annotation is used to provide a mock field/parameter for the class being tested. The type of the mock field or parameter can be any kind of reference type: 
+  public final void testListCount(@Mocked final EmployDAO dao) {
+  }
+
+Means, we are mocking the EmployDAO class, as it contains all sql statements, which hits the database. so we have to mock that class 
+
+import mockit.Mocked;
+
+MockUp : This contains the class in which we have to call the Database Methods (EmployDAO). 
+new MockUp<EmployFactory>() {
+      @Mock
+      EmployDAO dao() {
+        return dao;
+      }
+    };
+
+
+@Mock : This annotation which captures object of the class, that which hits the database. 
+
+___________________________________________________________________________________________________________________________
+
+
+Exam Model Question 
+
+Do the following changes in your code. 
+
+
+1) Add a new database field as DateOfBirth in Customer Table, 
+
+2) If customer places order on his birday Month, then he needs to get discount of 10% on regular items and 20% on bevarage items
+
+Then print bill and place order. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
