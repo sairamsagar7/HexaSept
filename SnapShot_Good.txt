@@ -1,0 +1,2 @@
+// this._router.navigate(['../name',{outlets:{data :'third'}}]);
+    this._router.navigate(['/name',{outlets:{'data' :['third',this.trainee,this.company]}}]);
