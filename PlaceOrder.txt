@@ -1,0 +1,4 @@
+  placeOrder(orders : Orders) : Observable<string> {
+    return this.http.post("http://localhost:8080/CmsNew/webapi/orders/placeorder/",orders).
+    map((res : Response) => res.text());
+  }
