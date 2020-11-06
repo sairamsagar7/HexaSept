@@ -50,11 +50,28 @@ Then copy the selector tag from ts file and paste in html tags of target page.
 
 Navigate from one page to another page.
 
-Navigate w.r.t. HTML ex : 
-Navigate w.r.t. Ts ex : 
+Navigate w.r.t. HTML ex : <a [routerLink] = "['menu']">Menu</a>
+Navigate w.r.t. Ts ex : this._router.navigate(["/menu"]);
 
 8) How to apply routing on the page (explain step by step)
 
-9) Give the syntax for component file (selector,tempalateUrl,styleUrls etc...)
+   -> How to redirect to default component : 
 
-10) How to apply routing on the page
+	{path:'', component:HomeComponent}
+
+
+   -> How to go to error component 
+
+	{path:'**', component:ErrorComponent}
+
+    -> How to make placeHolder for routing 
+
+	<router-outlet> </router-outlet>
+9) Give the syntax for component file (selector,tempalateUrl,styleUrls etc...)
+@Component({
+  selector: 'app-placeorder',
+  templateUrl: './htmfilel',
+  styleUrls: ['./css']
+})
+
+
